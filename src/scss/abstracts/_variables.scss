@@ -1,0 +1,40 @@
+//Colors
+$transparent: transparent;
+$gradient-48: linear-gradient(60deg, #3b495b 0%, #29323c 100%, #3a454f 80%);
+$black: rgb(0, 0, 0);
+$white: rgb(252, 252, 252);
+$crimson: rgb(236, 141, 7);
+$m-auto: 0 auto;
+$black-light: rgb(81, 93, 99);
+$black-light-2: rgb(240, 248, 255, 0.021);
+$black-medium-1: rgba(31, 30, 30, 0.24);
+$black-medium-2: rgba(31, 30, 30);
+
+//Transition
+$transition-03: 0.3s ease;
+
+//Size
+$sizes: (
+  small: (
+    300: 0.2rem,
+    400: 1rem,
+    500: 1.4rem,
+    600: 1.6rem,
+    700: 1.8rem,
+  ),
+  large: (
+    300: 2rem,
+    400: 2.5rem,
+    500: 3rem,
+    600: 4rem,
+    700: 6rem,
+    800: 7rem,
+  ),
+);
+
+$w-container: 1200px;
+
+//Elements - Custom value
+html {
+  --fs-10: 10px;
+}
