@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.container {
+  @include flex-c-c;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-container {
+  flex-direction: column;
+  margin: $m-auto;
+  padding: 100px 0;
+  max-width: $w-container;
+}

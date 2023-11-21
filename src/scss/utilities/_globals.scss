@@ -1,0 +1,65 @@
+// flexbox
+.flex {
+    display: flex;
+    &-jc-sb {
+      justify-content: space-between;
+    }
+    &-jc-c {
+      justify-content: center;
+    }
+    &-jc-fs {
+      justify-content: flex-start;
+    }
+    &-ai-c {
+      align-items: center;
+    }
+    &-ai-s {
+      align-items: start;
+    }
+    &-fd-c {
+      flex-direction: column;
+    }
+    &-fd-c-r {
+      flex-direction: column-reverse;
+    }
+    &-fd-r {
+      flex-direction: row;
+    }
+    &-fw-w {
+      flex-wrap: wrap;
+    }
+    &-ff-c {
+      flex-flow: column;
+    }
+  }
+  
+  //position
+  .relative {
+    position: relative;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  
+  //text
+  .text {
+    &-center {
+      text-align: center;
+    }
+    &-uppercase {
+      text-transform: uppercase;
+    }
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  //margin
+  .m-auto {
+    margin: 0 auto;
+  }
+  
