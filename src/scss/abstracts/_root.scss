@@ -1,0 +1,11 @@
+@use "./variables" as *;
+
+:root {
+  --background-color: rgb(255, 255, 255);
+
+  @each $size, $types in $sizes {
+    @each $type, $value in $types {
+      --fs-#{$size}-#{$type}: #{$value};
+    }
+  }
+}

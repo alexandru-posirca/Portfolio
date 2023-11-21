@@ -1,0 +1,66 @@
+@use "./variables" as *;
+
+//Size
+@mixin size-full {
+  width: 100%;
+  height: 100%;
+}
+
+//Position
+@mixin absolute-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin top-left-0 {
+  top: 0;
+  left: 0;
+}
+
+@mixin absolute-c-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: $black;
+  @include size-full;
+  content: "";
+}
+
+@mixin relative-h {
+  position: relative;
+  overflow: hidden;
+}
+
+//Flex
+@mixin flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-c-c-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex-c-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+//Animation
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
