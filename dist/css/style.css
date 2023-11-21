@@ -1,56 +1,19 @@
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use "../abstracts" as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   src\scss\base\_typography.scss 1:1  @forward
+ *   src\scss\base\_index.scss 3:1       @use
+ *   src\scss\style.scss 1:1             root stylesheet */
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b,
-u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot,
-thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-}
-
-footer, header, nav, section, main {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"../abstracts\" as *;\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\scss\\base\\_typography.scss 1:1  @forward\a   src\\scss\\base\\_index.scss 3:1       @use\a   src\\scss\\style.scss 1:1             root stylesheet";
 }
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
-
-html a, a:visited, a:active {
-  text-decoration: none;
-  color: black;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
