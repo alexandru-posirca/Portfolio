@@ -1,0 +1,95 @@
+@use "../abstracts" as *;
+
+#hero {
+  z-index: 1;
+  background-image: url("/src/assets/img/background-hero-desktop.jpg");
+  background-position: top center;
+  background-size: cover;
+  .hero {
+    padding: 0 50px 265px;
+    max-width: $w-container;
+    h1 {
+      display: block;
+      position: relative;
+      width: fit-content;
+      color: $transparent;
+      font-size: var(--fs-large-600);
+      @include animate(text-reveal, 0.5s, ease, forwards);
+      animation-delay: 1s;
+      font-weight: 700;
+
+      &:nth-child(1) {
+        animation-delay: 1s;
+        span {
+          animation-delay: 0.5s;
+        }
+      }
+      &:nth-child(2) {
+        animation-delay: 2s;
+
+        span {
+          animation-delay: 1.5s;
+        }
+      }
+      &:nth-child(3) {
+        @include animate(text-reveal-name, 0.5s, ease, forwards);
+        animation-delay: 3s;
+        span {
+          animation-delay: 2.5s;
+        }
+      }
+
+      span {
+        @include absolute-0;
+        height: 100%;
+        width: 0;
+        background-color: $crimson;
+        @include animate(text-reveal-box, 1s, ease, 1);
+        animation-delay: 0.5s;
+      }
+    }
+    .cta {
+      color: $white;
+    }
+    &:after {
+      @include absolute-c-0;
+    }
+  }
+}
+
+// KeyFrames
+@include keyframes(text-reveal-box) {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@include keyframes(text-reveal) {
+  100% {
+    color: $white;
+  }
+}
+
+@include keyframes(text-reveal-name) {
+  100% {
+    color: $crimson;
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  #hero {
+    background-image: url("/src/assets/img/background-hero-desktop.jpg");
+    .hero {
+      padding: 0 50px;
+      h1 {
+        font-size: var(--fs-large-700);
+      }
+    }
+  }
+}

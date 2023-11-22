@@ -164,4 +164,100 @@ a:active {
   color: black;
 }
 
+#hero {
+  z-index: 1;
+  background-image: url("/src/assets/img/background-hero-desktop.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+#hero .hero {
+  padding: 0 50px 265px;
+  max-width: 1200px;
+}
+#hero .hero h1 {
+  display: block;
+  position: relative;
+  width: fit-content;
+  color: transparent;
+  font-size: var(--fs-large-600);
+  animation: text-reveal 0.5s ease forwards;
+  animation-delay: 1s;
+  font-weight: 700;
+}
+#hero .hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero .hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero .hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero .hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero .hero h1:nth-child(3) {
+  animation: text-reveal-name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero .hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+#hero .hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(236, 141, 7);
+  animation: text-reveal-box 1s ease 1;
+  animation-delay: 0.5s;
+}
+#hero .hero .cta {
+  color: rgb(252, 252, 252);
+}
+#hero .hero:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+@keyframes text-reveal-box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text-reveal {
+  100% {
+    color: rgb(252, 252, 252);
+  }
+}
+@keyframes text-reveal-name {
+  100% {
+    color: rgb(236, 141, 7);
+  }
+}
+@media only screen and (min-width: 48rem) {
+  #hero {
+    background-image: url("/src/assets/img/background-hero-desktop.jpg");
+  }
+  #hero .hero {
+    padding: 0 50px;
+  }
+  #hero .hero h1 {
+    font-size: var(--fs-large-700);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
