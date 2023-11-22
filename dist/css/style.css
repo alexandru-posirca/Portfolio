@@ -113,6 +113,21 @@ p {
   letter-spacing: 0.05rem;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-container {
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1200px;
+}
+
 .flex {
   display: flex;
 }
@@ -174,21 +189,6 @@ p {
   margin: 0 auto;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.section-container {
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 100px 0;
-  max-width: 1200px;
-}
-
 .cta {
   display: inline-block;
   transition: 0.3s ease;
@@ -213,7 +213,7 @@ p {
 }
 #hero {
   z-index: 1;
-  background-image: url("/src/assets/img/background-hero-desktop.jpg");
+  background-image: url("/src/assets/img/background-hero-mobile.jpg");
   background-position: top center;
   background-size: cover;
 }
