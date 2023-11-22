@@ -1,0 +1,25 @@
+@use "./fonts" as *;
+@use "../abstracts" as *;
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--fs-10);
+}
+body {
+  font-family: $font;
+  background-color: var(--background-color);
+}
+
+img {
+  @include size-full;
+  object-fit: cover;
+}
+
+p {
+  margin-top: 5px;
+  line-height: var(--fs-large-400);
+  color: $black;
+  font-size: var(--fs-small-500);
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
