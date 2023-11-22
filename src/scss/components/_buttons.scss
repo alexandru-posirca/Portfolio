@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.cta {
+  display: inline-block;
+  transition: $transition-03;
+  margin-top: 20px;
+  border: 2px solid $crimson;
+  background-color: $transparent;
+  padding: 10px 30px;
+  letter-spacing: var(--fs-small-300);
+  font-size: var(--fs-large-300);
+  transition-property: background-color, color;
+
+  &:hover {
+    color: $white;
+    background-color: $crimson;
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  .cta {
+    padding: 10px 50px;
+    font-size: var(--fs-large-400);
+  }
+}
