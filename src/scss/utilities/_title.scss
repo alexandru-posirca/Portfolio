@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.section-title {
+  margin-bottom: 10px;
+  letter-spacing: var(--fs-small-300);
+  text-transform: uppercase;
+  color: $black;
+  font-size: var(--fs-large-600);
+  font-weight: 300;
+
+  span {
+    color: $crimson;
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  .section-title {
+    font-size: var(--fs-large-600);
+  }
+}
