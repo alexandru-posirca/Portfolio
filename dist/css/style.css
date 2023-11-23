@@ -1,3 +1,22 @@
+html {
+  --fs-10: 10px;
+}
+
+:root {
+  --background-color: rgb(255, 255, 255);
+  --fs-small-300: 0.2rem;
+  --fs-small-400: 1rem;
+  --fs-small-500: 1.4rem;
+  --fs-small-600: 1.6rem;
+  --fs-small-700: 1.8rem;
+  --fs-large-300: 2rem;
+  --fs-large-400: 2.5rem;
+  --fs-large-500: 3rem;
+  --fs-large-600: 4rem;
+  --fs-large-700: 6rem;
+  --fs-large-800: 7rem;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -53,25 +72,6 @@ input {
   border-radius: 0;
 }
 
-html {
-  --fs-10: 10px;
-}
-
-:root {
-  --background-color: rgb(255, 255, 255);
-  --fs-small-300: 0.2rem;
-  --fs-small-400: 1rem;
-  --fs-small-500: 1.4rem;
-  --fs-small-600: 1.6rem;
-  --fs-small-700: 1.8rem;
-  --fs-large-300: 2rem;
-  --fs-large-400: 2.5rem;
-  --fs-large-500: 3rem;
-  --fs-large-600: 4rem;
-  --fs-large-700: 6rem;
-  --fs-large-800: 7rem;
-}
-
 h2,
 h3 {
   font-weight: 500;
@@ -113,6 +113,185 @@ p {
   letter-spacing: 0.05rem;
 }
 
+.cta {
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-top: 20px;
+  border: 2px solid rgb(236, 141, 7);
+  background-color: transparent;
+  padding: 10px 30px;
+  letter-spacing: var(--fs-small-300);
+  font-size: var(--fs-large-300);
+  transition-property: background-color, color;
+}
+.cta:hover {
+  color: rgb(252, 252, 252);
+  background-color: rgb(236, 141, 7);
+}
+
+@media only screen and (min-width: 48rem) {
+  .cta {
+    padding: 10px 50px;
+    font-size: var(--fs-large-400);
+  }
+}
+#hero {
+  z-index: 1;
+  background-image: url("../assets/img/background-hero-mobile.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+#hero .hero {
+  padding: 0 50px 265px;
+  max-width: 1200px;
+}
+#hero .hero h1 {
+  display: block;
+  position: relative;
+  width: fit-content;
+  color: transparent;
+  font-size: var(--fs-large-600);
+  animation: text-reveal 0.5s ease forwards;
+  animation-delay: 1s;
+  font-weight: 700;
+}
+#hero .hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero .hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero .hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero .hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero .hero h1:nth-child(3) {
+  animation: text-reveal-name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero .hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+#hero .hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(236, 141, 7);
+  animation: text-reveal-box 1s ease 1;
+  animation-delay: 0.5s;
+}
+#hero .hero .cta {
+  color: rgb(252, 252, 252);
+}
+#hero .hero:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+@keyframes text-reveal-box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text-reveal {
+  100% {
+    color: rgb(252, 252, 252);
+  }
+}
+@keyframes text-reveal-name {
+  100% {
+    color: rgb(236, 141, 7);
+  }
+}
+@media only screen and (min-width: 48rem) {
+  #hero {
+    background-image: url("../assets/img/background-hero-desktop.jpg");
+  }
+  #hero .hero {
+    padding: 0 50px;
+  }
+  #hero .hero h1 {
+    font-size: var(--fs-large-700);
+  }
+}
+#about .about {
+  padding: 100px 20px;
+}
+#about .about .col-left {
+  width: 250px;
+  height: 360px;
+}
+#about .about .col-left .about-img {
+  border: 10px solid var(--background-color);
+  width: 100%;
+  height: 100%;
+}
+#about .about .col-left .about-img::after {
+  position: absolute;
+  top: 19px;
+  left: -33px;
+  z-index: -1;
+  border: 7px solid rgb(236, 141, 7);
+  width: 98%;
+  height: 100%;
+  content: "";
+}
+#about .about .col-right {
+  width: 100%;
+}
+#about .about .col-right h2 {
+  margin-bottom: 20px;
+  letter-spacing: var(--fs-small-300);
+}
+#about .about .col-right .cta {
+  margin: 30px 0;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  font-size: var(--fs-large-300);
+}
+#about .about .col-right .cta:hover {
+  color: rgb(252, 252, 252);
+}
+
+@media only screen and (min-width: 48rem) {
+  #about .about {
+    flex-direction: row;
+  }
+  #about .about .col-left {
+    padding-left: 60px;
+    width: 600px;
+    height: 400px;
+  }
+  #about .about .col-left .about-img::after {
+    top: 34px;
+    left: -45px;
+    border: 10px solid rgb(236, 141, 7);
+    height: 98%;
+  }
+  #about .about .col-right {
+    padding: 30px;
+    text-align: left;
+  }
+  #about .about .col-right h1 {
+    text-align: left;
+  }
+}
 .container {
   display: flex;
   align-items: center;
@@ -204,185 +383,6 @@ p {
 @media only screen and (min-width: 48rem) {
   .section-title {
     font-size: var(--fs-large-600);
-  }
-}
-.cta {
-  display: inline-block;
-  transition: 0.3s ease;
-  margin-top: 20px;
-  border: 2px solid rgb(236, 141, 7);
-  background-color: transparent;
-  padding: 10px 30px;
-  letter-spacing: var(--fs-small-300);
-  font-size: var(--fs-large-300);
-  transition-property: background-color, color;
-}
-.cta:hover {
-  color: rgb(252, 252, 252);
-  background-color: rgb(236, 141, 7);
-}
-
-@media only screen and (min-width: 48rem) {
-  .cta {
-    padding: 10px 50px;
-    font-size: var(--fs-large-400);
-  }
-}
-#hero {
-  z-index: 1;
-  background-image: url("/src/assets/img/background-hero-mobile.jpg");
-  background-position: top center;
-  background-size: cover;
-}
-#hero .hero {
-  padding: 0 50px 265px;
-  max-width: 1200px;
-}
-#hero .hero h1 {
-  display: block;
-  position: relative;
-  width: fit-content;
-  color: transparent;
-  font-size: var(--fs-large-600);
-  animation: text-reveal 0.5s ease forwards;
-  animation-delay: 1s;
-  font-weight: 700;
-}
-#hero .hero h1:nth-child(1) {
-  animation-delay: 1s;
-}
-#hero .hero h1:nth-child(1) span {
-  animation-delay: 0.5s;
-}
-#hero .hero h1:nth-child(2) {
-  animation-delay: 2s;
-}
-#hero .hero h1:nth-child(2) span {
-  animation-delay: 1.5s;
-}
-#hero .hero h1:nth-child(3) {
-  animation: text-reveal-name 0.5s ease forwards;
-  animation-delay: 3s;
-}
-#hero .hero h1:nth-child(3) span {
-  animation-delay: 2.5s;
-}
-#hero .hero h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: rgb(236, 141, 7);
-  animation: text-reveal-box 1s ease 1;
-  animation-delay: 0.5s;
-}
-#hero .hero .cta {
-  color: rgb(252, 252, 252);
-}
-#hero .hero:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.2;
-  z-index: -1;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  height: 100%;
-  content: "";
-}
-
-@keyframes text-reveal-box {
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-@keyframes text-reveal {
-  100% {
-    color: rgb(252, 252, 252);
-  }
-}
-@keyframes text-reveal-name {
-  100% {
-    color: rgb(236, 141, 7);
-  }
-}
-@media only screen and (min-width: 48rem) {
-  #hero {
-    background-image: url("/src/assets/img/background-hero-desktop.jpg");
-  }
-  #hero .hero {
-    padding: 0 50px;
-  }
-  #hero .hero h1 {
-    font-size: var(--fs-large-700);
-  }
-}
-#about .about {
-  padding: 100px 20px;
-}
-#about .about .col-left {
-  width: 250px;
-  height: 360px;
-}
-#about .about .col-left .about-img {
-  border: 10px solid var(--background-color);
-  width: 100%;
-  height: 100%;
-}
-#about .about .col-left .about-img::after {
-  position: absolute;
-  top: 19px;
-  left: -33px;
-  z-index: -1;
-  border: 7px solid rgb(236, 141, 7);
-  width: 98%;
-  height: 100%;
-  content: "";
-}
-#about .about .col-right {
-  width: 100%;
-}
-#about .about .col-right h2 {
-  margin-bottom: 20px;
-  letter-spacing: var(--fs-small-300);
-}
-#about .about .col-right .cta {
-  margin: 30px 0;
-  padding: 10px 20px;
-  color: rgb(0, 0, 0);
-  font-size: var(--fs-large-300);
-}
-#about .about .col-right .cta:hover {
-  color: rgb(252, 252, 252);
-}
-
-@media only screen and (min-width: 48rem) {
-  #about .about {
-    flex-direction: row;
-  }
-  #about .about .col-left {
-    padding-left: 60px;
-    width: 600px;
-    height: 400px;
-  }
-  #about .about .col-left .about-img::after {
-    top: 34px;
-    left: -45px;
-    border: 10px solid rgb(236, 141, 7);
-    height: 98%;
-  }
-  #about .about .col-right {
-    padding: 30px;
-    text-align: left;
-  }
-  #about .about .col-right h1 {
-    text-align: left;
   }
 }
 

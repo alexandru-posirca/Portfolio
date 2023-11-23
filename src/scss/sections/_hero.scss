@@ -2,7 +2,7 @@
 
 #hero {
   z-index: 1;
-  background-image: url("/src/assets/img/background-hero-mobile.jpg");
+  background-image: url("../assets/img/background-hero-mobile.jpg");
   background-position: top center;
   background-size: cover;
   .hero {
@@ -84,7 +84,7 @@
 //Media Queries
 @include mq(small) {
   #hero {
-    background-image: url("/src/assets/img/background-hero-desktop.jpg");
+    background-image: url("../assets/img/background-hero-desktop.jpg");
     .hero {
       padding: 0 50px;
       h1 {
