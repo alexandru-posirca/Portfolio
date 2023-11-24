@@ -394,6 +394,103 @@ p {
     padding: 3px 0;
   }
 }
+#projects .projects {
+  padding-bottom: 140px;
+}
+#projects .projects .projects-header h1 {
+  margin-bottom: 0;
+}
+#projects .projects .project-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 80%;
+  overflow: hidden;
+}
+#projects .projects .project-item .project-img {
+  cursor: pointer;
+}
+#projects .projects .project-item .project-img:hover img {
+  transform: scale(1.1);
+}
+#projects .projects .project-item .project-img:hover::after {
+  position: relative;
+}
+#projects .projects .project-item .project-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: start;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(252, 252, 252);
+  background-image: linear-gradient(60deg, #3b495b 0%, #29323c 100%, #3a454f 80%);
+  color: rgb(252, 252, 252);
+}
+#projects .projects .project-item .project-info h2 {
+  font-size: var(--fs-large-400);
+  font-weight: 600;
+}
+#projects .projects .project-item .project-info p {
+  padding: 10px 0;
+  color: rgb(252, 252, 252);
+}
+#projects .projects .project-item .project-img {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 50%;
+  height: 300px;
+}
+#projects .projects .project-item .project-img img {
+  transition: 0.3s ease transform;
+}
+#projects .projects .project-item .project-img:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.8;
+  background-image: linear-gradient(60deg, #3b495b 0%, #29323c 100%, #3a454f 80%);
+}
+
+@media only screen and (min-width: 48rem) {
+  #projects .projects {
+    padding: 182px 0 60px;
+  }
+  #projects .projects .projects-header {
+    margin-bottom: 40px;
+  }
+  #projects .projects .all-projects .project-item {
+    flex-direction: row;
+    margin: 0;
+    border-radius: 0;
+    width: 98%;
+    height: 280px;
+  }
+  #projects .projects .all-projects .project-item .project-info {
+    height: 100%;
+  }
+  #projects .projects .all-projects .project-item .project-img {
+    height: 100%;
+  }
+  #projects .projects .all-projects .project-item .project-img:after {
+    z-index: auto;
+  }
+  #projects .projects .all-projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
 .container {
   display: flex;
   align-items: center;
