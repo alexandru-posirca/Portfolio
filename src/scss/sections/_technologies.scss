@@ -1,0 +1,117 @@
+@use "../abstracts" as *;
+
+#technologies {
+  .technologies {
+    max-width: 1500px;
+    .tech-top {
+      max-width: 350px;
+      h1 {
+        span {
+          margin: 5px 0 5px;
+          font-size: var(--fs-large-300);
+        }
+      }
+    }
+    .tech-bottom {
+      @include flex-c-c;
+      margin-top: 10px;
+      .icon {
+        width: 80px;
+        height: 80px;
+      }
+      .tech-item {
+        @include flex-c-col;
+        @include relative-h;
+        flex-basis: 78%;
+        align-items: flex-start;
+        justify-content: start;
+        z-index: 1;
+        margin: 10px 5%;
+        border-radius: 10px;
+        background-image: url("../assets/img/tech-item.jpg");
+        height: 285px;
+        background-size: cover;
+        padding: 30px;
+        color: $white;
+
+        &::after {
+          @include absolute-c-0;
+          opacity: 0;
+        }
+        p {
+          text-align: left;
+          color: $white;
+        }
+        .logo-vs {
+          position: absolute;
+          right: 7px;
+          bottom: 5px;
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        .second-column-tools {
+          margin-left: 35px;
+          
+        }
+        .tools {
+          margin: 3px 0 0 15px;
+          list-style: circle;
+          font-size: var(--fs-small-500);
+          li {
+            padding: 4px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  #technologies {
+    .technologies {
+      .tech-top {
+        max-width: 500px;
+      }
+      .tech-bottom {
+        .tech-item {
+          flex-basis: 37%;
+          margin: 2.5%;
+          height: 280px;
+          .logo-vs {
+            img {
+              width: 35px;
+              height: 35px;
+            }
+          }
+          .tools {
+            li {
+              padding: 2px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(large) {
+  #technologies {
+    .technologies {
+      .tech-bottom {
+        .tech-item {
+          flex-basis: 22%;
+          margin: 1.5%;
+          height: 295px;
+          .tools {
+            li {
+              padding: 3px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
