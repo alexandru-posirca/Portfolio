@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+#contact {
+  .contact-items {
+    width: 400px;
+    .contact-item {
+      @include flex-c-c-col;
+      transition: $transition-03 box-shadow;
+      margin: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 18px 0 $black-light;
+      padding: 20px;
+      width: 80%;
+      text-align: center;
+      .icon {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        width: 70px;
+      }
+      .contact-info {
+        h2 {
+          margin-bottom: 6px;
+          font-size: var(--fs-large-400);
+        }
+        h3 {
+          font-size: var(--fs-small-600);
+        }
+      }
+      &:hover {
+        box-shadow: 0 0 5px 0 $black-light;
+      }
+    }
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  #contact {
+    .contact {
+      min-height: 20vh;
+      .contact-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 20px 0;
+        width: 100%;
+        .contact-item {
+          flex-direction: row;
+          margin: 20px 0;
+          padding: 15px 10px 15px 35px;
+          width: 28%;
+          .icon {
+            width: 85px;
+            height: 85px;
+            img {
+              object-fit: contain;
+            }
+          }
+          .contact-info {
+            padding-left: 15px;
+            width: 100%;
+            text-align: left;
+            word-break: break-all;
+          }
+        }
+      }
+    }
+  }
+}
