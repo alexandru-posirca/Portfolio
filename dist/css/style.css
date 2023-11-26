@@ -666,7 +666,66 @@ p {
 #header .header .nav-bar .nav-list .active {
   left: 0;
 }
+#header .header .nav-bar .nav-list .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  z-index: 100;
+  margin-right: 20px;
+  border: 3px solid rgb(252, 252, 252);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+#header .header .nav-bar .nav-list .hamburger .bar {
+  z-index: -1;
+  background-color: rgb(252, 252, 252);
+  width: 30px;
+  height: 2px;
+}
+#header .header .nav-bar .nav-list .hamburger .bar::after, #header .header .nav-bar .nav-list .hamburger .bar::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+  background-color: white;
+  content: "";
+}
+#header .header .nav-bar .nav-list .hamburger .bar::after {
+  top: 8px;
+}
+#header .header .nav-bar .nav-list .hamburger .bar::before {
+  bottom: 8px;
+}
+#header .header .nav-bar .nav-list .hamburger::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid rgb(252, 252, 252);
+  animation: hamburger-puls 1s ease infinite;
+  content: "";
+}
+#header .header .nav-bar .nav-list .active .bar::before {
+  bottom: 0;
+}
+#header .header .nav-bar .nav-list .active .bar::after {
+  top: 0;
+}
 
+@keyframes hamburger-puls {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
 @media only screen and (min-width: 75rem) {
   #header .header .nav-bar {
     padding-left: 82px;

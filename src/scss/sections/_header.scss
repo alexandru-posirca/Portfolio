@@ -71,11 +71,74 @@
         .active {
           left: 0;
         }
+        .hamburger {
+            @include flex-c-c;
+            transform: scale(0.8);
+            z-index: 100;
+            margin-right: 20px;
+            border: 3px solid $white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            .bar {
+              z-index: -1;
+              background-color: $white;
+              width: 30px;
+              height: 2px;
+              &::after,
+              &::before {
+                @include size-full;
+                position: absolute;
+                left: 0;
+                transition: $transition-03;
+                transition-property: top, bottom;
+                background-color: white;
+                content: "";
+              }
+              &::after {
+                top: 8px;
+              }
+              &::before {
+                bottom: 8px;
+              }
+            }
+            &::after {
+              @include size-full;
+              position: absolute;
+              border-radius: 50%;
+              border: 3px solid $white;
+              @include animate(hamburger-puls, 1s, ease, infinite);
+              content: "";
+            }
+          }
+          .active {
+            .bar {
+              &::before {
+                bottom: 0;
+              }
+              &::after {
+                top: 0;
+              }
+            }
+          }
       }
     }
   }
 }
 
+//Key Frames
+@include keyframes(hamburger-puls) {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+
+//Media Queries
 @include mq(large) {
     #header {
       .header {
