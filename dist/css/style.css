@@ -594,6 +594,106 @@ p {
   transition: 0.3s ease filter;
 }
 
+#header {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: auto;
+}
+#header .header {
+  min-height: 8vh;
+  transition: 0.3s ease background-color;
+}
+#header .header .nav-bar {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding-left: 40px;
+}
+#header .header .nav-bar .brand h1 {
+  margin-bottom: 0;
+  padding-right: 10px;
+  font-weight: 600;
+  color: rgb(252, 252, 252);
+  font-size: var(--fs-large-300);
+}
+#header .header .nav-bar .brand h1 span:nth-child(2) {
+  margin-left: 7px;
+}
+#header .header .nav-bar .nav-list ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 100%;
+  transition: 0.5s ease left;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(31, 30, 30);
+}
+#header .header .nav-bar .nav-list ul a {
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: var(--fs-small-300);
+  color: rgb(252, 252, 252);
+  font-size: var(--fs-large-400);
+  font-weight: 500;
+}
+#header .header .nav-bar .nav-list ul a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s ease letter-spacing;
+  z-index: -1;
+  letter-spacing: 50px;
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 8rem;
+  content: attr(data-after);
+}
+#header .header .nav-bar .nav-list ul li:hover a {
+  color: rgb(236, 141, 7);
+}
+#header .header .nav-bar .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+#header .header .nav-bar .nav-list .active {
+  left: 0;
+}
+
+@media only screen and (min-width: 75rem) {
+  #header .header .nav-bar {
+    padding-left: 82px;
+  }
+  #header .header .nav-bar .brand h1 {
+    font-size: var(--fs-large-400);
+  }
+  #header .header .nav-bar .nav-list .hamburger {
+    display: none;
+  }
+  #header .header .nav-bar .nav-list ul {
+    display: block;
+    position: initial;
+    background-color: transparent;
+    width: fit-content;
+    height: auto;
+  }
+  #header .header .nav-bar .nav-list ul li {
+    display: inline-block;
+  }
+  #header .header .nav-bar .nav-list ul li a {
+    font-size: var(--fs-small-600);
+  }
+  #header .header .nav-bar .nav-list ul a::after {
+    display: none;
+  }
+}
 .container {
   display: flex;
   align-items: center;
