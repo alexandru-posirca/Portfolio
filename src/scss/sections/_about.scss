@@ -2,11 +2,10 @@
 
 #about {
   .about {
-    padding: 156px 20px 100px;
+    padding-top: 140px;
     .col-left {
       width: 250px;
       height: 360px;
-
       .about-img {
         border: 10px solid var(--background-color);
         @include size-full;
@@ -46,6 +45,7 @@
 @include mq(small) {
   #about {
     .about {
+      padding-top: 156px;
       flex-direction: row;
       .col-left {
         padding-left: 60px;

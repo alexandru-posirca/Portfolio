@@ -3,13 +3,14 @@
 #contact {
   .contact-items {
     width: 400px;
+    gap: 20px;    
     .contact-item {
       @include flex-c-c-col;
       transition: $transition-03 box-shadow;
-      margin: 40px;
       border-radius: 10px;
-      box-shadow: 0 0 18px 0 $black-light;
-      padding: 20px;
+      box-shadow: 0 0 10px 0 $black-light;
+      padding: 10px;
+      padding-bottom: 15px;
       width: 80%;
       text-align: center;
       .icon {
@@ -19,8 +20,8 @@
       }
       .contact-info {
         h2 {
-          margin-bottom: 6px;
-          font-size: var(--fs-large-400);
+          margin-bottom: 8px;
+          font-size: var(--fs-large-300);
         }
         a {
           font-size: var(--fs-small-600);
@@ -39,15 +40,12 @@
     .contact {
       min-height: 20vh;
       .contact-items {
-        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         margin: 0;
-        padding: 20px 0;
         width: 100%;
         .contact-item {
           flex-direction: row;
-          margin: 20px 0;
           padding: 15px;
           width: 28%;
           .icon {

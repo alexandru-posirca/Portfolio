@@ -9,6 +9,12 @@
 .section-container {
   flex-direction: column;
   margin: $m-auto;
-  padding: 100px 0;
   max-width: $w-container;
+  padding: 100px 20px 100px;
+}
+
+@include mq(small) {
+  .section-container {
+    padding: 156px 20px 100px;
+  }
 }

@@ -4,8 +4,10 @@ html {
 
 :root {
   --background-color: rgb(255, 255, 255);
+  --fs-small-200: 0.1rem;
   --fs-small-300: 0.2rem;
   --fs-small-400: 1rem;
+  --fs-small-450: 1.2rem;
   --fs-small-500: 1.4rem;
   --fs-small-600: 1.6rem;
   --fs-small-700: 1.8rem;
@@ -231,7 +233,7 @@ p {
   }
 }
 #about .about {
-  padding: 156px 20px 100px;
+  padding-top: 140px;
 }
 #about .about .col-left {
   width: 250px;
@@ -271,6 +273,7 @@ p {
 
 @media only screen and (min-width: 48rem) {
   #about .about {
+    padding-top: 156px;
     flex-direction: row;
   }
   #about .about .col-left {
@@ -325,6 +328,7 @@ p {
   background-size: cover;
   padding: 26px;
   color: rgb(252, 252, 252);
+  max-width: 300px;
 }
 #technologies .technologies .tech-bottom .tech-item::after {
   position: absolute;
@@ -372,12 +376,13 @@ p {
 
 @media only screen and (min-width: 48rem) {
   #technologies .technologies .tech-top {
-    max-width: 540px;
+    max-width: 780px;
   }
   #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 37%;
     margin: 2.5%;
     height: 280px;
+    max-width: 340px;
   }
   #technologies .technologies .tech-bottom .tech-item .logo-vs img {
     width: 35px;
@@ -389,13 +394,8 @@ p {
     flex-basis: 22%;
     margin: 1.5%;
     height: 295px;
+    max-width: initial;
   }
-}
-#projects .projects {
-  padding-bottom: 140px;
-}
-#projects .projects .projects-header h1 {
-  margin-bottom: 0;
 }
 #projects .projects .project-item {
   display: flex;
@@ -423,7 +423,7 @@ p {
   flex-direction: column;
   flex-basis: 50%;
   align-items: start;
-  padding: 30px;
+  padding: 18px;
   width: 100%;
   height: 100%;
   background-color: rgb(252, 252, 252);
@@ -438,6 +438,7 @@ p {
   padding: 5px 0;
   color: rgb(252, 252, 252);
   margin-bottom: -5px;
+  font-size: var(--fs-small-450);
 }
 #projects .projects .project-item .project-img {
   position: relative;
@@ -447,7 +448,7 @@ p {
 }
 #projects .projects .project-item .project-img img {
   transition: 0.3s ease transform;
-  scale: 1.2;
+  scale: 1.27;
 }
 #projects .projects .project-item .project-img:after {
   position: absolute;
@@ -462,23 +463,25 @@ p {
   opacity: 0.8;
   background-image: linear-gradient(60deg, #3b495b 0%, #29323c 100%, #3a454f 80%);
 }
+#projects .projects .project-item:first-child {
+  margin: 0 auto;
+}
 
 @media only screen and (min-width: 48rem) {
-  #projects .projects {
-    padding: 100px 0 60px;
-  }
-  #projects .projects .projects-header {
-    margin-bottom: 40px;
+  #projects .projects .all-projects {
+    min-height: initial;
+    align-items: center;
   }
   #projects .projects .all-projects .project-item {
     flex-direction: row;
     margin: 0;
     border-radius: 0;
-    width: 90%;
+    width: 96%;
     height: 258px;
   }
   #projects .projects .all-projects .project-item .project-info {
     height: 100%;
+    justify-content: space-evenly;
   }
   #projects .projects .all-projects .project-item .project-info h2 {
     font-size: var(--fs-large-400);
@@ -487,7 +490,7 @@ p {
     height: 100%;
   }
   #projects .projects .all-projects .project-item .project-img img {
-    scale: 1.08;
+    scale: 1;
   }
   #projects .projects .all-projects .project-item .project-img:after {
     z-index: auto;
@@ -496,8 +499,24 @@ p {
     flex-direction: row-reverse;
   }
 }
+@media only screen and (min-width: 75rem) {
+  #projects .projects .all-projects .project-item {
+    width: 100%;
+    height: 340px;
+  }
+  #projects .projects .all-projects .project-item .project-info {
+    padding: 30px;
+  }
+  #projects .projects .all-projects .project-item .project-info p {
+    font-size: var(--fs-small-600);
+  }
+  #projects .projects .all-projects .project-item .project-img img {
+    scale: 1.22;
+  }
+}
 #contact .contact-items {
   width: 400px;
+  gap: 20px;
 }
 #contact .contact-items .contact-item {
   display: flex;
@@ -505,10 +524,10 @@ p {
   justify-content: center;
   flex-direction: column;
   transition: 0.3s ease box-shadow;
-  margin: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 18px 0 rgb(81, 93, 99);
-  padding: 20px;
+  box-shadow: 0 0 10px 0 rgb(81, 93, 99);
+  padding: 10px;
+  padding-bottom: 15px;
   width: 80%;
   text-align: center;
 }
@@ -518,8 +537,8 @@ p {
   width: 70px;
 }
 #contact .contact-items .contact-item .contact-info h2 {
-  margin-bottom: 6px;
-  font-size: var(--fs-large-400);
+  margin-bottom: 8px;
+  font-size: var(--fs-large-300);
 }
 #contact .contact-items .contact-item .contact-info a {
   font-size: var(--fs-small-600);
@@ -533,16 +552,13 @@ p {
     min-height: 20vh;
   }
   #contact .contact .contact-items {
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0;
-    padding: 20px 0;
     width: 100%;
   }
   #contact .contact .contact-items .contact-item {
     flex-direction: row;
-    margin: 20px 0;
     padding: 15px;
     width: 28%;
   }
@@ -767,12 +783,20 @@ p {
   }
 }
 .tools {
+  display: flex;
+  gap: 2px;
   margin: 3px 0 0 15px;
   list-style: circle;
   font-size: var(--fs-small-500);
 }
 .tools li {
   padding: 4px 0;
+}
+.tools.tech-info {
+  margin-top: 10px;
+  gap: 25px;
+  font-size: var(--fs-small-450);
+  text-align: center;
 }
 
 .main-info {
@@ -783,6 +807,29 @@ b {
   font-weight: 700;
 }
 
+.title-comm {
+  margin-bottom: 30px;
+}
+.title-comm h1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 48rem) {
+  .tools {
+    font-size: var(--fs-small-500);
+  }
+  .title-comm {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  .tools {
+    font-size: var(--fs-small-500);
+  }
+  .tools.tech-info {
+    font-size: var(--fs-small-700);
+  }
+}
 .container {
   display: flex;
   align-items: center;
@@ -794,10 +841,15 @@ b {
 .section-container {
   flex-direction: column;
   margin: 0 auto;
-  padding: 100px 0;
   max-width: 1200px;
+  padding: 100px 20px 100px;
 }
 
+@media only screen and (min-width: 48rem) {
+  .section-container {
+    padding: 156px 20px 100px;
+  }
+}
 .flex {
   display: flex;
 }
@@ -860,7 +912,7 @@ b {
 }
 
 .section-title {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   letter-spacing: var(--fs-small-300);
   text-transform: uppercase;
   color: rgb(0, 0, 0);

@@ -3,21 +3,55 @@
 //tools technologies
 
 .tools {
+  display: flex;
+  gap: 2px;
   margin: 3px 0 0 15px;
   list-style: circle;
   font-size: var(--fs-small-500);
   li {
     padding: 4px 0;
   }
+  &.tech-info {
+    margin-top: 10px;
+    gap: 25px;
+    font-size: var(--fs-small-450);
+    text-align: center;
+  }
 }
 
 //important info
 
 .main-info {
-//   color: $crimson;
+  //   color: $crimson;
   font-weight: 700;
 }
 
 b {
-    font-weight: 700;
+  font-weight: 700;
+}
+
+.title-comm {
+  margin-bottom: 30px;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+@include mq(small) {
+  .tools {
+    font-size: var(--fs-small-500);
+  }
+  .title-comm {
+    margin-bottom: 40px;
+  }
+}
+
+
+@include mq(large) {
+  .tools {
+    font-size: var(--fs-small-500);
+        &.tech-info {
+          font-size: var(--fs-small-700);
+        }
+  }
 }
