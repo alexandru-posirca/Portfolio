@@ -18,7 +18,7 @@
         cursor: pointer;
         &:hover {
           img {
-            transform: scale(1.1);
+            transform: scale(1.06);
           }
           &::after {
             position: relative;
@@ -50,6 +50,7 @@
         height: 300px;
         img {
           transition: $transition-03 transform;
+          scale: 1.2;
         }
         &:after {
           @include absolute-c-0;
@@ -81,6 +82,9 @@
           }
           .project-img {
             height: 100%;
+            img {
+              scale: 1.08;
+            }
             &:after {
               z-index: auto;
             }

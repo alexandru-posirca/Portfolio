@@ -414,7 +414,7 @@ p {
   cursor: pointer;
 }
 #projects .projects .project-item .project-img:hover img {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 #projects .projects .project-item .project-img:hover::after {
   position: relative;
@@ -449,6 +449,7 @@ p {
 }
 #projects .projects .project-item .project-img img {
   transition: 0.3s ease transform;
+  scale: 1.2;
 }
 #projects .projects .project-item .project-img:after {
   position: absolute;
@@ -483,6 +484,9 @@ p {
   }
   #projects .projects .all-projects .project-item .project-img {
     height: 100%;
+  }
+  #projects .projects .all-projects .project-item .project-img img {
+    scale: 1.08;
   }
   #projects .projects .all-projects .project-item .project-img:after {
     z-index: auto;
