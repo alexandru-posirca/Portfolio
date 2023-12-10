@@ -2,12 +2,6 @@
 
 #projects {
   .projects {
-    padding-bottom: 140px;
-    .projects-header {
-      h1 {
-        margin-bottom: 0;
-      }
-    }
     .project-item {
       @include flex-c-c-col;
       margin: 20px auto;
@@ -30,7 +24,7 @@
         @include flex-c-c-col;
         flex-basis: 50%;
         align-items: start;
-        padding: 30px;
+        padding: 18px;
         @include size-full;
         background-color: $white;
         background-image: $gradient-48;
@@ -43,6 +37,7 @@
           padding: 5px 0;
           color: $white;
           margin-bottom: -5px;
+          font-size: var(--fs-small-450);
         }
       }
       .project-img {
@@ -51,13 +46,16 @@
         height: 300px;
         img {
           transition: $transition-03 transform;
-          scale: 1.2;
+          scale: 1.27;
         }
         &:after {
           @include absolute-c-0;
           opacity: 0.8;
           background-image: $gradient-48;
         }
+      }
+      &:first-child {
+        margin: 0 auto;
       }
     }
   }
@@ -67,19 +65,18 @@
 @include mq(small) {
   #projects {
     .projects {
-      padding: 100px 0 60px;
-      .projects-header {
-        margin-bottom: 40px;
-      }
       .all-projects {
+        min-height: initial;
+        align-items: center;
         .project-item {
           flex-direction: row;
           margin: 0;
           border-radius: 0;
-          width: 90%;
+          width: 96%;
           height: 258px;
           .project-info {
             height: 100%;
+            justify-content: space-evenly;
             h2 {
               font-size: var(--fs-large-400);
             }
@@ -87,7 +84,7 @@
           .project-img {
             height: 100%;
             img {
-              scale: 1.08;
+              scale: 1;
             }
             &:after {
               z-index: auto;
@@ -95,6 +92,30 @@
           }
           &:nth-child(even) {
             flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(large) {
+  #projects {
+    .projects {
+      .all-projects {
+        .project-item {
+          width: 100%;
+          height: 340px;
+          .project-info {
+            padding: 30px;
+            p {
+              font-size: var(--fs-small-600);
+            }
+          }
+          .project-img {
+            img {
+              scale: 1.22;
+            }
           }
         }
       }
