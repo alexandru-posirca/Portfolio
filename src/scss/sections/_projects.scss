@@ -36,12 +36,13 @@
         background-image: $gradient-48;
         color: $white;
         h2 {
-          font-size: var(--fs-large-400);
+          font-size: var(--fs-large-300);
           font-weight: 600;
         }
         p {
-          padding: 10px 0;
+          padding: 5px 0;
           color: $white;
+          margin-bottom: -5px;
         }
       }
       .project-img {
@@ -66,7 +67,7 @@
 @include mq(small) {
   #projects {
     .projects {
-      padding: 182px 0 60px;
+      padding: 100px 0 60px;
       .projects-header {
         margin-bottom: 40px;
       }
@@ -75,10 +76,13 @@
           flex-direction: row;
           margin: 0;
           border-radius: 0;
-          width: 98%;
-          height: 280px;
+          width: 90%;
+          height: 258px;
           .project-info {
             height: 100%;
+            h2 {
+              font-size: var(--fs-large-400);
+            }
           }
           .project-img {
             height: 100%;

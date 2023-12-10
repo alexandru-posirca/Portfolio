@@ -15,10 +15,7 @@
     .tech-bottom {
       @include flex-c-c;
       margin-top: 10px;
-      .icon {
-        width: 80px;
-        height: 80px;
-      }
+     
       .tech-item {
         @include flex-c-col;
         @include relative-h;
@@ -38,6 +35,21 @@
           @include absolute-c-0;
           opacity: 0;
         }
+        .tech-icons {
+          display: flex;
+          gap: 7px;
+          width: 100%;
+          position: relative;
+          right: 10px;
+          margin-bottom: 5px;
+          .icon {
+            width: 60px;
+            height: 60px;
+          }
+          .icon-tools {
+            scale: 1.1;
+          }
+        }
         p {
           text-align: left;
           color: $white;
@@ -55,16 +67,19 @@
           margin-left: 35px;
           
         }
-        .tools {
-          margin: 3px 0 0 15px;
-          list-style: circle;
-          font-size: var(--fs-small-500);
-          li {
-            padding: 4px 0;
-          }
-        }
       }
     }
+  }
+}
+
+//common
+
+.tools {
+  margin: 3px 0 0 15px;
+  list-style: circle;
+  font-size: var(--fs-small-500);
+  li {
+    padding: 4px 0;
   }
 }
 
@@ -73,7 +88,7 @@
   #technologies {
     .technologies {
       .tech-top {
-        max-width: 500px;
+        max-width: 540px;
       }
       .tech-bottom {
         .tech-item {
@@ -86,11 +101,7 @@
               height: 35px;
             }
           }
-          .tools {
-            li {
-              padding: 2px 0;
-            }
-          }
+        
         }
       }
     }
@@ -105,11 +116,7 @@
           flex-basis: 22%;
           margin: 1.5%;
           height: 295px;
-          .tools {
-            li {
-              padding: 3px 0;
-            }
-          }
+        
         }
       }
     }

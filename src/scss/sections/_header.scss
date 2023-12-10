@@ -6,7 +6,7 @@
   width: 100vw;
   height: auto;
   .header {
-    min-height: 8vh;
+    min-height: auto;
     transition: $transition-03 background-color;
     .nav-bar {
       @include size-full;

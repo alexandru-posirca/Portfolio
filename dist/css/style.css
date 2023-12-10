@@ -231,7 +231,7 @@ p {
   }
 }
 #about .about {
-  padding: 100px 20px;
+  padding: 156px 20px 100px;
 }
 #about .about .col-left {
   width: 250px;
@@ -308,10 +308,6 @@ p {
   justify-content: center;
   margin-top: 10px;
 }
-#technologies .technologies .tech-bottom .icon {
-  width: 80px;
-  height: 80px;
-}
 #technologies .technologies .tech-bottom .tech-item {
   display: flex;
   justify-content: center;
@@ -342,6 +338,21 @@ p {
   content: "";
   opacity: 0;
 }
+#technologies .technologies .tech-bottom .tech-item .tech-icons {
+  display: flex;
+  gap: 7px;
+  width: 100%;
+  position: relative;
+  right: 10px;
+  margin-bottom: 5px;
+}
+#technologies .technologies .tech-bottom .tech-item .tech-icons .icon {
+  width: 60px;
+  height: 60px;
+}
+#technologies .technologies .tech-bottom .tech-item .tech-icons .icon-tools {
+  scale: 1.1;
+}
 #technologies .technologies .tech-bottom .tech-item p {
   text-align: left;
   color: rgb(252, 252, 252);
@@ -358,18 +369,19 @@ p {
 #technologies .technologies .tech-bottom .tech-item .second-column-tools {
   margin-left: 35px;
 }
-#technologies .technologies .tech-bottom .tech-item .tools {
+
+.tools {
   margin: 3px 0 0 15px;
   list-style: circle;
   font-size: var(--fs-small-500);
 }
-#technologies .technologies .tech-bottom .tech-item .tools li {
+.tools li {
   padding: 4px 0;
 }
 
 @media only screen and (min-width: 48rem) {
   #technologies .technologies .tech-top {
-    max-width: 500px;
+    max-width: 540px;
   }
   #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 37%;
@@ -380,18 +392,12 @@ p {
     width: 35px;
     height: 35px;
   }
-  #technologies .technologies .tech-bottom .tech-item .tools li {
-    padding: 2px 0;
-  }
 }
 @media only screen and (min-width: 75rem) {
   #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 22%;
     margin: 1.5%;
     height: 295px;
-  }
-  #technologies .technologies .tech-bottom .tech-item .tools li {
-    padding: 3px 0;
   }
 }
 #projects .projects {
@@ -434,12 +440,13 @@ p {
   color: rgb(252, 252, 252);
 }
 #projects .projects .project-item .project-info h2 {
-  font-size: var(--fs-large-400);
+  font-size: var(--fs-large-300);
   font-weight: 600;
 }
 #projects .projects .project-item .project-info p {
-  padding: 10px 0;
+  padding: 5px 0;
   color: rgb(252, 252, 252);
+  margin-bottom: -5px;
 }
 #projects .projects .project-item .project-img {
   position: relative;
@@ -467,7 +474,7 @@ p {
 
 @media only screen and (min-width: 48rem) {
   #projects .projects {
-    padding: 182px 0 60px;
+    padding: 100px 0 60px;
   }
   #projects .projects .projects-header {
     margin-bottom: 40px;
@@ -476,11 +483,14 @@ p {
     flex-direction: row;
     margin: 0;
     border-radius: 0;
-    width: 98%;
-    height: 280px;
+    width: 90%;
+    height: 258px;
   }
   #projects .projects .all-projects .project-item .project-info {
     height: 100%;
+  }
+  #projects .projects .all-projects .project-item .project-info h2 {
+    font-size: var(--fs-large-400);
   }
   #projects .projects .all-projects .project-item .project-img {
     height: 100%;
@@ -606,7 +616,7 @@ p {
   height: auto;
 }
 #header .header {
-  min-height: 8vh;
+  min-height: auto;
   transition: 0.3s ease background-color;
 }
 #header .header .nav-bar {
