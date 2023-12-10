@@ -28,7 +28,7 @@
         background-image: url("../assets/img/tech-item.jpg");
         height: 285px;
         background-size: cover;
-        padding: 30px;
+        padding: 26px;
         color: $white;
 
         &::after {
@@ -69,17 +69,6 @@
         }
       }
     }
-  }
-}
-
-//common
-
-.tools {
-  margin: 3px 0 0 15px;
-  list-style: circle;
-  font-size: var(--fs-small-500);
-  li {
-    padding: 4px 0;
   }
 }
 

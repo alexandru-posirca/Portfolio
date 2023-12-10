@@ -323,7 +323,7 @@ p {
   background-image: url("../assets/img/tech-item.jpg");
   height: 285px;
   background-size: cover;
-  padding: 30px;
+  padding: 26px;
   color: rgb(252, 252, 252);
 }
 #technologies .technologies .tech-bottom .tech-item::after {
@@ -368,15 +368,6 @@ p {
 }
 #technologies .technologies .tech-bottom .tech-item .second-column-tools {
   margin-left: 35px;
-}
-
-.tools {
-  margin: 3px 0 0 15px;
-  list-style: circle;
-  font-size: var(--fs-small-500);
-}
-.tools li {
-  padding: 4px 0;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -530,7 +521,7 @@ p {
   margin-bottom: 6px;
   font-size: var(--fs-large-400);
 }
-#contact .contact-items .contact-item .contact-info h3 {
+#contact .contact-items .contact-item .contact-info a {
   font-size: var(--fs-small-600);
 }
 #contact .contact-items .contact-item:hover {
@@ -552,7 +543,7 @@ p {
   #contact .contact .contact-items .contact-item {
     flex-direction: row;
     margin: 20px 0;
-    padding: 15px 10px 15px 35px;
+    padding: 15px;
     width: 28%;
   }
   #contact .contact .contact-items .contact-item .icon {
@@ -567,6 +558,14 @@ p {
     width: 100%;
     text-align: left;
     word-break: break-all;
+  }
+  #contact .contact .contact-items .contact-item .tel-info {
+    position: relative;
+    right: 14px;
+  }
+  #contact .contact .contact-items .contact-item .address-info {
+    position: relative;
+    right: 8px;
   }
 }
 #footer {
@@ -767,6 +766,23 @@ p {
     display: none;
   }
 }
+.tools {
+  margin: 3px 0 0 15px;
+  list-style: circle;
+  font-size: var(--fs-small-500);
+}
+.tools li {
+  padding: 4px 0;
+}
+
+.main-info {
+  font-weight: 700;
+}
+
+b {
+  font-weight: 700;
+}
+
 .container {
   display: flex;
   align-items: center;
