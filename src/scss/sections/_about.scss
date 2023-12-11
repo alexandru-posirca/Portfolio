@@ -2,7 +2,6 @@
 
 #about {
   .about {
-    padding-top: 140px;
     .col-left {
       width: 250px;
       height: 360px;
@@ -45,7 +44,6 @@
 @include mq(small) {
   #about {
     .about {
-      padding-top: 156px;
       flex-direction: row;
       .col-left {
         padding-left: 60px;

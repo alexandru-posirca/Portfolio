@@ -232,9 +232,6 @@ p {
     font-size: var(--fs-large-700);
   }
 }
-#about .about {
-  padding-top: 140px;
-}
 #about .about .col-left {
   width: 250px;
   height: 360px;
@@ -273,7 +270,6 @@ p {
 
 @media only screen and (min-width: 48rem) {
   #about .about {
-    padding-top: 156px;
     flex-direction: row;
   }
   #about .about .col-left {
@@ -297,6 +293,7 @@ p {
 }
 #technologies .technologies {
   max-width: 1500px;
+  padding-bottom: 90px;
 }
 #technologies .technologies .tech-top {
   max-width: 350px;
@@ -309,7 +306,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 #technologies .technologies .tech-bottom .tech-item {
   display: flex;
@@ -317,18 +314,18 @@ p {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  flex-basis: 78%;
+  flex-basis: 100%;
   align-items: flex-start;
   justify-content: start;
   z-index: 1;
   margin: 10px 5%;
   border-radius: 10px;
   background-image: url("../assets/img/tech-item.jpg");
-  height: 285px;
+  height: 270px;
   background-size: cover;
-  padding: 26px;
+  padding: 25px 30px;
   color: rgb(252, 252, 252);
-  max-width: 300px;
+  max-width: 350px;
 }
 #technologies .technologies .tech-bottom .tech-item::after {
   position: absolute;
@@ -344,15 +341,15 @@ p {
 }
 #technologies .technologies .tech-bottom .tech-item .tech-icons {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   width: 100%;
   position: relative;
   right: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 #technologies .technologies .tech-bottom .tech-item .tech-icons .icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 #technologies .technologies .tech-bottom .tech-item .tech-icons .icon-tools {
   scale: 1.1;
@@ -375,27 +372,38 @@ p {
 }
 
 @media only screen and (min-width: 48rem) {
+  #technologies .technologies {
+    padding-bottom: 100px;
+  }
   #technologies .technologies .tech-top {
     max-width: 780px;
   }
   #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 37%;
     margin: 2.5%;
-    height: 280px;
+    height: 300px;
     max-width: 340px;
   }
   #technologies .technologies .tech-bottom .tech-item .logo-vs img {
     width: 35px;
     height: 35px;
   }
+  #technologies .technologies .tech-bottom .tech-item .tech-icons .icon {
+    width: 55px;
+    height: 55px;
+  }
 }
 @media only screen and (min-width: 75rem) {
   #technologies .technologies .tech-bottom .tech-item {
-    flex-basis: 22%;
-    margin: 1.5%;
-    height: 295px;
+    flex-basis: 24%;
+    margin: 0.5%;
+    height: 280px;
     max-width: initial;
+    gap: 5px;
   }
+}
+#projects .projects {
+  padding-bottom: 80px;
 }
 #projects .projects .project-item {
   display: flex;
@@ -404,7 +412,7 @@ p {
   flex-direction: column;
   margin: 20px auto;
   border-radius: 10px;
-  width: 80%;
+  max-width: 350px;
   overflow: hidden;
 }
 #projects .projects .project-item .project-img {
@@ -431,14 +439,16 @@ p {
   color: rgb(252, 252, 252);
 }
 #projects .projects .project-item .project-info h2 {
-  font-size: var(--fs-large-300);
+  font-size: var(--fs-small-700);
   font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 #projects .projects .project-item .project-info p {
   padding: 5px 0;
   color: rgb(252, 252, 252);
   margin-bottom: -5px;
-  font-size: var(--fs-small-450);
+  font-size: var(--fs-small-500);
 }
 #projects .projects .project-item .project-img {
   position: relative;
@@ -468,6 +478,9 @@ p {
 }
 
 @media only screen and (min-width: 48rem) {
+  #projects .projects {
+    padding-bottom: 100px;
+  }
   #projects .projects .all-projects {
     min-height: initial;
     align-items: center;
@@ -476,15 +489,18 @@ p {
     flex-direction: row;
     margin: 0;
     border-radius: 0;
+    max-width: initial;
     width: 96%;
     height: 258px;
   }
   #projects .projects .all-projects .project-item .project-info {
     height: 100%;
-    justify-content: space-evenly;
   }
   #projects .projects .all-projects .project-item .project-info h2 {
-    font-size: var(--fs-large-400);
+    font-size: var(--fs-large-300);
+  }
+  #projects .projects .all-projects .project-item .project-info p {
+    font-size: var(--fs-small-450);
   }
   #projects .projects .all-projects .project-item .project-img {
     height: 100%;
@@ -506,6 +522,10 @@ p {
   }
   #projects .projects .all-projects .project-item .project-info {
     padding: 30px;
+    gap: 5px;
+  }
+  #projects .projects .all-projects .project-item .project-info h2 {
+    font-size: var(--fs-large-400);
   }
   #projects .projects .all-projects .project-item .project-info p {
     font-size: var(--fs-small-600);
@@ -795,7 +815,7 @@ p {
 .tools.tech-info {
   margin-top: 10px;
   gap: 25px;
-  font-size: var(--fs-small-450);
+  font-size: var(--fs-small-500);
   text-align: center;
 }
 

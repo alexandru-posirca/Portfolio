@@ -3,6 +3,7 @@
 #technologies {
   .technologies {
     max-width: 1500px;
+    padding-bottom: 90px;
     .tech-top {
       max-width: 350px;
       h1 {
@@ -14,23 +15,23 @@
     }
     .tech-bottom {
       @include flex-c-c;
-      margin-top: 10px;
+      margin-top: 18px;
      
       .tech-item {
         @include flex-c-col;
         @include relative-h;
-        flex-basis: 78%;
+        flex-basis: 100%;
         align-items: flex-start;
         justify-content: start;
         z-index: 1;
         margin: 10px 5%;
         border-radius: 10px;
         background-image: url("../assets/img/tech-item.jpg");
-        height: 285px;
+        height: 270px;
         background-size: cover;
-        padding: 26px;
+        padding: 25px 30px;
         color: $white;
-        max-width: 300px;
+        max-width: 350px;
 
         &::after {
           @include absolute-c-0;
@@ -38,14 +39,14 @@
         }
         .tech-icons {
           display: flex;
-          gap: 7px;
+          gap: 8px;
           width: 100%;
           position: relative;
           right: 10px;
-          margin-bottom: 5px;
+          margin-bottom: 8px;
           .icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
           }
           .icon-tools {
             scale: 1.1;
@@ -76,6 +77,7 @@
 @include mq(small) {
   #technologies {
     .technologies {
+      padding-bottom: 100px;
       .tech-top {
         max-width: 780px;
       }
@@ -83,7 +85,7 @@
         .tech-item {
           flex-basis: 37%;
           margin: 2.5%;
-          height: 280px;
+          height: 300px;
           max-width: 340px;
           .logo-vs {
             img {
@@ -91,7 +93,12 @@
               height: 35px;
             }
           }
-        
+          .tech-icons {
+            .icon {
+              width: 55px;
+              height: 55px;
+            }
+          }
         }
       }
     }
@@ -103,10 +110,11 @@
     .technologies {
       .tech-bottom {
         .tech-item {
-          flex-basis: 22%;
-          margin: 1.5%;
-          height: 295px;
+          flex-basis: 24%;
+          margin: 0.5%;
+          height: 280px;
           max-width: initial;
+          gap: 5px;
         }
       }
     }
