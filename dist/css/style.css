@@ -553,7 +553,6 @@ p {
 }
 #contact .contact-items .contact-item .icon {
   margin: 0 auto;
-  margin-bottom: 10px;
   width: 70px;
 }
 #contact .contact-items .contact-item .contact-info h2 {
@@ -583,8 +582,8 @@ p {
     width: 28%;
   }
   #contact .contact .contact-items .contact-item .icon {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
   }
   #contact .contact .contact-items .contact-item .icon img {
     object-fit: contain;
@@ -777,7 +776,7 @@ p {
 }
 @media only screen and (min-width: 75rem) {
   #header .header .nav-bar {
-    padding-left: 82px;
+    padding-left: 0;
   }
   #header .header .nav-bar .brand h1 {
     font-size: var(--fs-large-400);
