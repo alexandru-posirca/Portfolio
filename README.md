@@ -5,3 +5,5 @@ In the development of this project, the tech stack used was:
 * HTML
 * SASS
 * JavaScript
+
+Website Deployed - LIVE: https://alexandru-posirca-portfolio.pages.dev/
