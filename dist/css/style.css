@@ -341,15 +341,12 @@ p {
 }
 #technologies .technologies .tech-bottom .tech-item .tech-icons {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 16px;
   width: 100%;
   position: relative;
   right: 10px;
   margin-bottom: 8px;
-}
-#technologies .technologies .tech-bottom .tech-item .tech-icons .icon {
-  width: 50px;
-  height: 50px;
 }
 #technologies .technologies .tech-bottom .tech-item .tech-icons .icon-tools {
   scale: 1.1;
@@ -362,10 +359,6 @@ p {
   position: absolute;
   right: 7px;
   bottom: 5px;
-}
-#technologies .technologies .tech-bottom .tech-item .logo-vs img {
-  width: 32px;
-  height: 32px;
 }
 #technologies .technologies .tech-bottom .tech-item .second-column-tools {
   margin-left: 35px;
@@ -383,14 +376,6 @@ p {
     margin: 2.5%;
     height: 300px;
     max-width: 340px;
-  }
-  #technologies .technologies .tech-bottom .tech-item .logo-vs img {
-    width: 35px;
-    height: 35px;
-  }
-  #technologies .technologies .tech-bottom .tech-item .tech-icons .icon {
-    width: 55px;
-    height: 55px;
   }
 }
 @media only screen and (min-width: 75rem) {
@@ -545,15 +530,18 @@ p {
   flex-direction: column;
   transition: 0.3s ease box-shadow;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgb(81, 93, 99);
+  box-shadow: 0 0 5px 0 rgb(81, 93, 99);
   padding: 10px;
   padding-bottom: 15px;
   width: 80%;
   text-align: center;
 }
 #contact .contact-items .contact-item .icon {
-  margin: 0 auto;
-  width: 70px;
+  margin-bottom: 5px;
+}
+#contact .contact-items .contact-item .icon svg {
+  width: 100%;
+  height: 100%;
 }
 #contact .contact-items .contact-item .contact-info h2 {
   margin-bottom: 8px;
@@ -563,7 +551,7 @@ p {
   font-size: var(--fs-small-600);
 }
 #contact .contact-items .contact-item:hover {
-  box-shadow: 0 0 5px 0 rgb(81, 93, 99);
+  box-shadow: 0 0 3px 0 rgb(81, 93, 99);
 }
 
 @media only screen and (min-width: 48rem) {
@@ -572,27 +560,26 @@ p {
   }
   #contact .contact .contact-items {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0;
     width: 100%;
+    gap: 30px;
   }
   #contact .contact .contact-items .contact-item {
     flex-direction: row;
     padding: 15px;
-    width: 28%;
+    width: 29%;
   }
   #contact .contact .contact-items .contact-item .icon {
-    width: 65px;
-    height: 65px;
-  }
-  #contact .contact .contact-items .contact-item .icon img {
-    object-fit: contain;
+    margin-bottom: 0;
+    margin-right: 4px;
   }
   #contact .contact .contact-items .contact-item .contact-info {
     padding-left: 15px;
     width: 100%;
     text-align: left;
     word-break: break-all;
+    width: max-content;
   }
   #contact .contact .contact-items .contact-item .tel-info {
     position: relative;

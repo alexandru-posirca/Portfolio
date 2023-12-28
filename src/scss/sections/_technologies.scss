@@ -16,7 +16,7 @@
     .tech-bottom {
       @include flex-c-c;
       margin-top: 18px;
-     
+
       .tech-item {
         @include flex-c-col;
         @include relative-h;
@@ -39,15 +39,12 @@
         }
         .tech-icons {
           display: flex;
-          gap: 8px;
+          align-items: center;;
+          gap: 16px;
           width: 100%;
           position: relative;
           right: 10px;
           margin-bottom: 8px;
-          .icon {
-            width: 50px;
-            height: 50px;
-          }
           .icon-tools {
             scale: 1.1;
           }
@@ -60,10 +57,6 @@
           position: absolute;
           right: 7px;
           bottom: 5px;
-          img {
-            width: 32px;
-            height: 32px;
-          }
         }
         .second-column-tools {
           margin-left: 35px;
@@ -87,18 +80,6 @@
           margin: 2.5%;
           height: 300px;
           max-width: 340px;
-          .logo-vs {
-            img {
-              width: 35px;
-              height: 35px;
-            }
-          }
-          .tech-icons {
-            .icon {
-              width: 55px;
-              height: 55px;
-            }
-          }
         }
       }
     }
