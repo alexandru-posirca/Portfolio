@@ -90,13 +90,17 @@ a:active {
   color: black;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dist/assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+}
 html {
   scroll-behavior: smooth;
   font-size: var(--fs-10);
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat;
   background-color: var(--background-color);
 }
 
@@ -139,7 +143,7 @@ p {
 }
 #hero {
   z-index: 1;
-  background-image: url("../assets/img/background-hero-mobile.jpg");
+  background-image: url("../assets/img/background-hero-mobile.webp");
   background-position: top center;
   background-size: cover;
 }
@@ -223,7 +227,7 @@ p {
 }
 @media only screen and (min-width: 48rem) {
   #hero {
-    background-image: url("../assets/img/background-hero-desktop.jpg");
+    background-image: url("../assets/img/background-hero-desktop.webp");
   }
   #hero .hero {
     padding: 0 50px;

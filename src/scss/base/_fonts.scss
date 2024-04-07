@@ -1,1 +1,4 @@
-$font: 'Montserrat', sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dist/assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+}
