@@ -324,7 +324,7 @@ p {
   z-index: 1;
   margin: 10px 5%;
   border-radius: 10px;
-  background-image: url("../assets/img/tech-item.jpg");
+  background-image: url("../assets/img/tech-item.webp");
   height: 270px;
   background-size: cover;
   padding: 25px 30px;
@@ -438,6 +438,9 @@ p {
   color: rgb(252, 252, 252);
   margin-bottom: -5px;
   font-size: var(--fs-small-500);
+}
+#projects .projects .project-item .project-info ul li {
+  font-weight: 700;
 }
 #projects .projects .project-item .project-img {
   position: relative;
