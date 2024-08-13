@@ -452,6 +452,9 @@ p {
   transition: 0.3s ease transform;
   scale: 1.27;
 }
+#projects .projects .project-item .project-img .task-platform {
+  scale: 1.4;
+}
 #projects .projects .project-item .project-img:after {
   position: absolute;
   top: 0;

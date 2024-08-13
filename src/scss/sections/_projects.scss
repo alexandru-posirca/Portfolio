@@ -54,6 +54,9 @@
           transition: $transition-03 transform;
           scale: 1.27;
         }
+        & .task-platform {
+          scale: 1.40;
+        }
         &:after {
           @include absolute-c-0;
           opacity: 0.8;
