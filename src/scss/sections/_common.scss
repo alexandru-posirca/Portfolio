@@ -13,9 +13,11 @@
   }
   &.tech-info {
     margin-top: 10px;
-    gap: 25px;
+    // gap: 5px;
+    gap: 13%;
     font-size: var(--fs-small-500);
     text-align: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -40,6 +42,9 @@ b {
 @include mq(small) {
   .tools {
     font-size: var(--fs-small-500);
+    &.tech-info {
+      gap: 21px;
+    }
   }
   .title-comm {
     margin-bottom: 40px;
@@ -52,6 +57,7 @@ b {
     font-size: var(--fs-small-500);
         &.tech-info {
           font-size: var(--fs-small-700);
+          gap: 25px;
         }
   }
 }

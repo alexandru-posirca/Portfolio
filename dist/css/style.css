@@ -236,6 +236,9 @@ p {
     font-size: var(--fs-large-700);
   }
 }
+#about .about {
+  padding-top: 156px;
+}
 #about .about .col-left {
   width: 250px;
   height: 360px;
@@ -294,13 +297,17 @@ p {
   #about .about .col-right h1 {
     text-align: left;
   }
+  #about .about .col-right p {
+    max-width: 540px;
+  }
 }
 #technologies .technologies {
   max-width: 1500px;
   padding-bottom: 90px;
 }
 #technologies .technologies .tech-top {
-  max-width: 350px;
+  max-width: 390px;
+  width: 100%;
 }
 #technologies .technologies .tech-top h1 span {
   margin: 5px 0 5px;
@@ -322,14 +329,14 @@ p {
   align-items: flex-start;
   justify-content: start;
   z-index: 1;
-  margin: 10px 5%;
+  margin: 10px 0;
   border-radius: 10px;
   background-image: url("../assets/img/tech-item.webp");
   height: 270px;
   background-size: cover;
   padding: 25px 30px;
   color: rgb(252, 252, 252);
-  max-width: 350px;
+  max-width: 390px;
 }
 #technologies .technologies .tech-bottom .tech-item::after {
   position: absolute;
@@ -373,13 +380,13 @@ p {
     padding-bottom: 100px;
   }
   #technologies .technologies .tech-top {
-    max-width: 780px;
+    max-width: 540px;
   }
   #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 37%;
     margin: 2.5%;
     height: 300px;
-    max-width: 340px;
+    max-width: 390px;
   }
 }
 @media only screen and (min-width: 75rem) {
@@ -401,7 +408,7 @@ p {
   flex-direction: column;
   margin: 20px auto;
   border-radius: 10px;
-  max-width: 350px;
+  max-width: 390px;
   overflow: hidden;
 }
 #projects .projects .project-item .project-img {
@@ -439,8 +446,31 @@ p {
   margin-bottom: -5px;
   font-size: var(--fs-small-500);
 }
-#projects .projects .project-item .project-info ul li {
+#projects .projects .project-item .project-info .code-stack {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+}
+#projects .projects .project-item .project-info .code-stack .tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#projects .projects .project-item .project-info .code-stack .tech-stack ul {
+  margin-top: 0;
+}
+#projects .projects .project-item .project-info .code-stack .tech-stack ul li {
   font-weight: 700;
+}
+#projects .projects .project-item .project-info .code-stack img {
+  width: 35px;
+  height: auto;
+}
+#projects .projects .project-item .project-info .code-stack a {
+  font-size: var(--fs-small-500);
+  color: rgb(252, 252, 252);
 }
 #projects .projects .project-item .project-img {
   position: relative;
@@ -525,12 +555,16 @@ p {
   #projects .projects .all-projects .project-item .project-info p {
     font-size: var(--fs-small-600);
   }
+  #projects .projects .all-projects .project-item .project-info .code-stack a {
+    font-size: var(--fs-small-700);
+  }
   #projects .projects .all-projects .project-item .project-img img {
     scale: 1.22;
   }
 }
 #contact .contact-items {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   gap: 20px;
 }
 #contact .contact-items .contact-item {
@@ -574,6 +608,7 @@ p {
     margin: 0;
     width: 100%;
     gap: 30px;
+    max-width: initial;
   }
   #contact .contact .contact-items .contact-item {
     flex-direction: row;
@@ -609,7 +644,7 @@ p {
 }
 #footer .footer .brand h2 {
   color: rgb(252, 252, 252);
-  font-size: var(--fs-large-500);
+  font-size: var(--fs-large-400);
 }
 #footer .footer .brand h2 span:nth-child(2) {
   margin-left: 7px;
@@ -628,17 +663,22 @@ p {
 }
 #footer .footer .social-icon .social-item {
   margin: 0 5px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
-#footer .footer .social-icon .social-item:hover img {
+#footer .footer .social-icon .social-item:hover svg {
   filter: grayscale(0);
 }
-#footer .footer .social-icon .social-item img {
+#footer .footer .social-icon .social-item svg {
   filter: grayscale(1);
   transition: 0.3s ease filter;
 }
 
+@media only screen and (min-width: 48rem) {
+  #footer .footer .brand h2 {
+    font-size: var(--fs-large-500);
+  }
+}
 #header {
   top: 0;
   left: 0;
@@ -653,15 +693,15 @@ p {
 #header .header .nav-bar {
   width: 100%;
   height: 100%;
-  max-width: 1300px;
-  padding-left: 40px;
+  max-width: 1500px;
+  padding: 0 20px;
 }
 #header .header .nav-bar .brand h1 {
   margin-bottom: 0;
   padding-right: 10px;
   font-weight: 600;
   color: rgb(252, 252, 252);
-  font-size: var(--fs-large-300);
+  font-size: var(--fs-small-600);
 }
 #header .header .nav-bar .brand h1 span:nth-child(2) {
   margin-left: 7px;
@@ -693,7 +733,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate3d(-50%, -50%, 0) scale(0);
   transition: 0.3s ease letter-spacing;
   z-index: -1;
   letter-spacing: 50px;
@@ -705,7 +745,7 @@ p {
   color: rgb(236, 141, 7);
 }
 #header .header .nav-bar .nav-list ul li:hover a::after {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate3d(-50%, -50%, 0) scale(1);
   letter-spacing: initial;
 }
 #header .header .nav-bar .nav-list .active {
@@ -717,7 +757,7 @@ p {
   justify-content: center;
   transform: scale(0.8);
   z-index: 100;
-  margin-right: 20px;
+  margin-right: -6px;
   border: 3px solid rgb(252, 252, 252);
   border-radius: 50%;
   width: 60px;
@@ -773,7 +813,7 @@ p {
 }
 @media only screen and (min-width: 75rem) {
   #header .header .nav-bar {
-    padding-left: 0;
+    padding: 0 20px;
   }
   #header .header .nav-bar .brand h1 {
     font-size: var(--fs-large-400);
@@ -810,9 +850,10 @@ p {
 }
 .tools.tech-info {
   margin-top: 10px;
-  gap: 25px;
+  gap: 13%;
   font-size: var(--fs-small-500);
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .main-info {
@@ -834,6 +875,9 @@ b {
   .tools {
     font-size: var(--fs-small-500);
   }
+  .tools.tech-info {
+    gap: 21px;
+  }
   .title-comm {
     margin-bottom: 40px;
   }
@@ -844,6 +888,7 @@ b {
   }
   .tools.tech-info {
     font-size: var(--fs-small-700);
+    gap: 25px;
   }
 }
 .container {
@@ -861,11 +906,6 @@ b {
   padding: 100px 20px 100px;
 }
 
-@media only screen and (min-width: 48rem) {
-  .section-container {
-    padding: 156px 20px 100px;
-  }
-}
 .flex {
   display: flex;
 }
@@ -932,8 +972,9 @@ b {
   letter-spacing: var(--fs-small-300);
   text-transform: uppercase;
   color: rgb(0, 0, 0);
-  font-size: var(--fs-large-600);
+  font-size: var(--fs-large-500);
   font-weight: 300;
+  text-align: center;
 }
 .section-title span {
   color: rgb(236, 141, 7);

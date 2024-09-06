@@ -2,7 +2,8 @@
 
 #contact {
   .contact-items {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     gap: 20px;
     .contact-item {
       @include flex-c-c-col;
@@ -47,6 +48,7 @@
         margin: 0;
         width: 100%;
         gap: 30px;
+        max-width: initial;
         .contact-item {
           flex-direction: row;
           padding: 15px;

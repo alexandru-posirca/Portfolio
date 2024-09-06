@@ -2,6 +2,7 @@
 
 #about {
   .about {
+    padding-top: 156px;
     .col-left {
       width: 250px;
       height: 360px;
@@ -63,6 +64,9 @@
         text-align: left;
         h1 {
           text-align: left;
+        }
+        p {
+          max-width: 540px;
         }
       }
     }
