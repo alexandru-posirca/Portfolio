@@ -26,15 +26,15 @@
             <div class="bar relative"></div>
           </div>
           <ul class="absolute">
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
+            <li><a title="Home" href="#hero" data-after="Home">Home</a></li>
+            <li><a title="About" href="#about" data-after="About">About</a></li>
             <li>
-              <a href="#technologies" data-after="Technologies"
+              <a title="Technologies" href="#technologies" data-after="Technologies"
                 >Technologies</a
               >
             </li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a title="Projects" href="#projects" data-after="Projects">Projects</a></li>
+            <li><a title="Contact" href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -49,7 +49,7 @@
                 <h1>Hello, <span></span></h1>
                 <h1>I'm<span></span></h1>
                 <h1>Alex<span></span></h1>
-                <a href="#projects" type="button" class="cta text-uppercase">
+                <a title="Portfolio" href="#projects" class="cta text-uppercase">
                     Portfolio
                 </a>
             </div>
@@ -62,7 +62,7 @@
         <div class="about container text-center section-container flex-fd-c-r">
           <div class="col-left">
             <div class="about-img relative">
-              <img src="./assets/img/profile.webp" alt="profile" />
+              <img src="./assets/img/profile.webp" loading="lazy" alt="Picture profile" width="322" height="380"/>
             </div>
           </div>
           <div class="col-right">
@@ -75,10 +75,10 @@
             </p>
             <button
               class="cta pointer"
-              type="submit"
+              title="View resume"
               onclick="window.open('https://drive.google.com/file/d/14JSJzks24kA5XXmnaAeWg6BDRHQhFgtH/view?utm_source=google-drive')"
             >
-              View Resume
+              View resume
             </button>
           </div>
         </div>
@@ -111,7 +111,7 @@
                 Vanilla <b>JavaScript</b> implemented at a very efficient level in many projects, followed by intermediate level development with the <b>React</b> library in the last projects.
               </p>
               <div class="logo-vs">
-                <img src="./assets/img/logo-vs.svg" alt="logo-visual-studio-code" width="32" height="32">
+                <img src="./assets/img/logo-vs.svg" loading="lazy" alt="Logo visual studio code" width="32" height="32">
               </div>
             </div>
             <div class="tech-item">
@@ -133,7 +133,7 @@
                 <b>HTML</b> at an <b>advanced</b> level, implemented in projects <b>natively</b>, in <b>React</b> projects through <b>JSX</b> syntax, as well as in <b>Astro</b> projects. For user interfaces I used <b>Figma</b>, <b>Adobe XD.</b>
               </p>
               <div class="logo-vs">
-                <img src="./assets/img/logo-vs.svg" alt="logo-visual-studio-code" width="32" height="32">
+                <img src="./assets/img/logo-vs.svg" loading="lazy" alt="Logo visual studio code" width="32" height="32">
               </div>
             </div>
             <div class="tech-item">
@@ -152,7 +152,7 @@
                 Vanilla <b>CSS</b>, the <b>SASS</b> preprocessor, the <b>Tailwind CSS</b> framework, all at the same <b>advanced</b> level of implementation in the developed projects.
               </p>
               <div class="logo-vs">
-                <img src="./assets/img/logo-vs.svg" alt="logo-visual-studio-code" width="32" height="32">
+                <img src="./assets/img/logo-vs.svg" loading="lazy" alt="Logo visual studio code" width="32" height="32">
               </div>
             </div>
             <div class="tech-item">
@@ -186,7 +186,7 @@
                 </div>
               </div>
               <div class="logo-vs">
-                <img src="./assets/img/logo-vs.svg" alt="logo-visual-studio-code" width="32" height="32">
+                <img src="./assets/img/logo-vs.svg" loading="lazy" alt="Logo visual studio code" width="32" height="32">
               </div>
             </div>
           </div>
@@ -208,24 +208,27 @@
                   Web platform represents my version of the <b>Kanban</b> board for <b>Agile project management</b>, which was my <b>dissertation</b> at the computer science master's degree completed this year.
                   <br/>
                 </p>
-                <!-- <p>
-                  Developed my own version of the <b>Kanban Board</b> for <b>Agile project management</b>.
-                </p> -->
-                <div>
-                  <p>In the development of the project, the tech stack used was:</p>
-                  <ul class="tools tech-info">
-                    <li>React</li>
-                    <li>Tailwind CSS</li>
-                  </ul>
+                <div class="code-stack">
+                  <div class="tech-stack">
+                    <img src="./assets/img/code-stack.svg" loading="lazy" alt="Code stack icon" width="40" height="40">
+                    <ul class="tools tech-info">
+                      <li>React</li>
+                      <li>Tailwind CSS</li>
+                    </ul>
+                  </div>
+                  <a title="Github task platform project" href="https://github.com/alexandru-posirca/Task-Management-Software" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/github.svg" loading="lazy" alt="Github task platform project" width="40" height="40">
+                  </a>
                 </div>
               </div>
               <div class="project-img">
                 <a
+                  title="Task platform project preview"
                   href="https://task-management-software.pages.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="./assets/img/task-platform.webp" alt="task-platform" width="1600" height="1217" class="task-platform"
+                  <img src="./assets/img/task-platform.webp" loading="lazy" alt="Task platform project preview" width="1600" height="1217" class="task-platform"
                 /></a>
               </div>
             </div>
@@ -235,22 +238,28 @@
                 <p>
                   The development idea started from my desire to offer fully functional web services to clients through my personal projects that I develop all in the form of a web agency.
                 </p>
-                <div>
-                  <p>In the development of the project, the tech stack used was:</p>
-                  <ul class="tools tech-info">
-                    <li>Astro</li>
-                    <li>Tailwind CSS</li>
-                    <li>JavaScript</li>
-                  </ul>
+                <div class="code-stack">
+                  <div class="tech-stack">
+                    <img src="./assets/img/code-stack.svg" loading="lazy" alt="Code stack icon" width="40" height="40">
+                    <ul class="tools tech-info">
+                      <li>Astro</li>
+                      <li>Tailwind CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
+                  <a title="Github web agency project preview" href="https://github.com/alexandru-posirca/Web-Dev-Agency" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/github.svg" loading="lazy" alt="Github web agency project preview" width="40" height="40">
+                  </a>
                 </div>
               </div>
               <div class="project-img">
                 <a
+                  title="Web dev agency project"
                   href="https://web-dev-agency.pages.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="./assets/img/web-dev-agency-item.webp" alt="portofolio-project" width="1600" height=916"
+                  <img src="./assets/img/web-dev-agency-item.webp" loading="lazy" alt="Web dev agency project" width="1600" height="916"
                 /></a>
               </div>
             </div>
@@ -260,22 +269,28 @@
                 <p>
                   This website is based on making a personalized fitness <b>subscription</b>, following a complex fully configurable form, the user must be logged into the account, to be able to <b>sign up</b> and access the subscription information.
                 </p>
-                <div>
-                  <p>In the development of the project, the tech stack used was:</p>
-                  <ul class="tools tech-info">
-                    <li>HTML</li>
-                    <li>Tailwind CSS</li>
-                    <li>JavaScript</li>
-                  </ul>
+                <div class="code-stack">
+                  <div class="tech-stack">
+                    <img src="./assets/img/code-stack.svg" loading="lazy" alt="Code stack icon" width="40" height="40">
+                    <ul class="tools tech-info">
+                      <li>HTML</li>
+                      <li>Tailwind CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
+                  <a title="Github fitness club project"" href="https://github.com/alexandru-posirca/Fitness-Club-App" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/github.svg" loading="lazy" alt="Github fitness club project" width="40" height="40">
+                  </a>
                 </div>
               </div>
               <div class="project-img">
                 <a
+                  title="Fitness club project preview"
                   href="https://fitness-club-app.pages.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="./assets/img/fitness-project-item.webp" alt="portofolio-project" width="1600" height="916"
+                  <img src="./assets/img/fitness-project-item.webp" loading="lazy" alt="Fitness club project preview" width="1600" height="916"
                 /></a>
               </div>
             </div>
@@ -285,22 +300,28 @@
                 <p>
                   In this portfolio website I have synthesized my entire personal experience as a <b>frontend developer</b>  apart from the projects developed on the job so far.
                 </p>
-                <div>
-                  <p>In the development of the project, the tech stack used was:</p>
-                  <ul class="tools tech-info">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>JavaScript</li>
-                  </ul>
+                <div class="code-stack">
+                  <div class="tech-stack">
+                    <img src="./assets/img/code-stack.svg" loading="lazy" alt="code-stack" width="40" height="40">
+                    <ul class="tools tech-info">
+                      <li>HTML</li>
+                      <li>SASS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
+                  <a title="Github portfolio project" href="https://github.com/alexandru-posirca/Portfolio"target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/github.svg" loading="lazy" alt="Github portfolio project" width="40" height="40">
+                  </a>
                 </div>
               </div>
               <div class="project-img">
                 <a
+                  title="Portfolio project preview"
                   href="https://alexandru-posirca-portfolio.pages.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="./assets/img/portofolio-project-item.webp" alt="portofolio-project" width="1600" height="916"
+                  <img src="./assets/img/portofolio-project-item.webp" loading="lazy" alt="Portfolio project preview" width="1600" height="916"
                 /></a>
               </div>
             </div>
@@ -323,8 +344,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 32 32"><path fill="#414f62" d="M10.25 2A3.25 3.25 0 0 0 7 5.25v21.5A3.25 3.25 0 0 0 10.25 30h11.5A3.25 3.25 0 0 0 25 26.75V5.25A3.25 3.25 0 0 0 21.75 2zM9 5.25C9 4.56 9.56 4 10.25 4h11.5c.69 0 1.25.56 1.25 1.25v21.5c0 .69-.56 1.25-1.25 1.25h-11.5C9.56 28 9 27.44 9 26.75zM14 24a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2z"></path></svg>
               </div>
               <div class="contact-info tel-info">
-                <h2>Phone</h2>
-                <a href="tel:0787426368">0787426368</a>
+                <h2>Phone number</h2>
+                <a title="Phone" href="tel:0787426368">0787426368</a>
               </div>
             </div>
             <div class="contact-item">
@@ -333,7 +354,7 @@
               </div>
               <div class="contact-info">
                 <h2>Email</h2>
-                <a href="mailto:alexposirca99@gmail.com">alexposirca99@gmail.com</a>
+                <a title="Email" href="mailto:alexposirca99@gmail.com">alexposirca99@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
@@ -342,7 +363,7 @@
               </div>
               <div class="contact-info address-info">
                 <h2>Adress</h2>
-                <a href="https://maps.app.goo.gl/y4hok87bw1nyfkwT6" target="_blank">București, România</a>
+                <a title="Location" href="https://maps.app.goo.gl/y4hok87bw1nyfkwT6" target="_blank">București, România</a>
               </div>
             </div>
           </div>
@@ -361,19 +382,41 @@
           <h3>My Complete Profile</h3>
           <div class="social-icon flex">
             <div class="social-item">
-              <a href="https://github.com/alexandru-posirca" target="_blank">
-                <img
-                  src="https://img.icons8.com/dusk/64/000000/github.png"
-                  alt="github"
-              /></a>
+              <a title="Github profile" href="https://github.com/alexandru-posirca" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
+                <g>
+                  <path class="st0" fill="#242938" d="M18.3,32h-6.5c-6.6,0-12-5.4-12-12v-8c0-6.6,5.4-12,12-12h6.5c6.6,0,12,5.4,12,12v8C30.3,26.6,24.9,32,18.3,32
+                    z"/>
+                  <path class="st0" fill="#242938" d="M7.5,0h17C28.6,0,32,3.4,32,7.5v17c0,4.1-3.4,7.5-7.5,7.5h-17C3.4,32,0,28.6,0,24.5v-17C0,3.4,3.4,0,7.5,0z"/>
+                  <path class="st0" fill="#242938" d="M29.9,32H2.1C1,32,0,31,0,29.9V2.1C0,1,1,0,2.1,0h27.7C31,0,32,1,32,2.1v27.7C32,31,31,32,29.9,32z"/>
+                  <path class="st1" fill="#FFFFFF" d="M16.1,3.4C9.2,3.4,3.6,8.9,3.6,15.9c0,5.5,3.6,10.2,8.5,11.9c0.6,0.1,0.9-0.3,0.9-0.6c0-0.3,0-1.3,0-2.3
+                    c-3.5,0.8-4.2-1.5-4.2-1.5c-0.6-1.4-1.4-1.8-1.4-1.8c-1.1-0.8,0.1-0.8,0.1-0.8c1.3,0.1,1.9,1.3,1.9,1.3c1.1,1.9,2.9,1.4,3.6,1
+                    c0.1-0.8,0.4-1.4,0.8-1.7C11,21.1,8.1,20,8.1,15.2c0-1.4,0.5-2.5,1.3-3.4c-0.1-0.3-0.6-1.6,0.1-3.3c0,0,1-0.3,3.4,1.3
+                    c1-0.3,2.1-0.4,3.1-0.4c1.1,0,2.1,0.1,3.1,0.4c2.4-1.6,3.4-1.3,3.4-1.3c0.7,1.7,0.3,3,0.1,3.3c0.8,0.9,1.3,2,1.3,3.4
+                    c0,4.8-2.9,5.9-5.7,6.2c0.4,0.4,0.8,1.1,0.8,2.3c0,1.7,0,3,0,3.4c0,0.3,0.2,0.7,0.9,0.6c5-1.7,8.5-6.3,8.5-11.9
+                    C28.6,8.9,23,3.4,16.1,3.4 M8.3,21.2c0,0.1-0.1,0.1-0.2,0C8,21.2,8,21.1,8,21s0.1-0.1,0.2,0C8.3,21,8.3,21.1,8.3,21.2 M8.9,21.7
+                    c-0.1,0.1-0.2,0-0.3-0.1s-0.1-0.2,0-0.3c0.1-0.1,0.2,0,0.3,0.1C8.9,21.5,9,21.6,8.9,21.7 M9.3,22.4c-0.1,0.1-0.2,0-0.3-0.1
+                    S8.9,22.1,9,22c0.1-0.1,0.2,0,0.3,0.1S9.4,22.4,9.3,22.4 M10,23.2c-0.1,0.1-0.2,0.1-0.3,0S9.6,23,9.6,22.9c0.1-0.1,0.2-0.1,0.3,0
+                    C10.1,23,10.1,23.1,10,23.2 M11,23.5c0,0.1-0.2,0.1-0.3,0.1s-0.2-0.2-0.2-0.3c0-0.1,0.2-0.1,0.3-0.1C10.9,23.3,11,23.4,11,23.5
+                     M12,23.6c0,0.1-0.1,0.2-0.3,0.2c-0.1,0-0.3-0.1-0.3-0.2s0.1-0.2,0.3-0.2C11.9,23.4,12,23.5,12,23.6 M13,23.6
+                    c0,0.1-0.1,0.2-0.2,0.2c-0.1,0-0.3,0-0.3-0.1s0.1-0.2,0.2-0.2C12.9,23.4,13,23.5,13,23.6"/>
+                </g>
+                </svg>
+              </a>
             </div>
             <div class="social-item">
               <a
-                href="https://www.linkedin.com/in/ionu%C8%9B-alexandru-po%C8%99irc%C4%83-dev"
-                target="_blank"><img
-                  src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-linkedin-social-media-justicon-flat-justicon.png"
-                  alt="linkedin"
-              /></a>
+                title="Linkedin profile"
+                href="https://www.linkedin.com/in/ionut-alexandru-posirca/"
+                target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 38.1 38.1">
+                  <path fill="#0076B2" d="M35.3,0H2.8C1.3,0,0,1.2,0,2.8v32.6c0,1.5,1.3,2.8,2.8,2.7h32.5c1.5,0,2.8-1.2,2.8-2.8V2.7
+                    C38.1,1.2,36.8,0,35.3,0"/>
+                  <path fill="#FFFFFF" d="M5.6,14.3h5.7v18.2H5.6V14.3z M8.5,5.2c1.8,0,3.3,1.5,3.3,3.3c0,1.8-1.5,3.3-3.3,3.3c-1.8,0-3.3-1.5-3.3-3.3
+                    c0,0,0,0,0,0C5.2,6.7,6.7,5.2,8.5,5.2 M14.9,14.3h5.4v2.5h0.1c0.8-1.4,2.6-2.9,5.4-2.9c5.7,0,6.8,3.8,6.8,8.6v10h-5.7v-8.9
+                    c0-2.1,0-4.8-2.9-4.8s-3.4,2.3-3.4,4.7v9h-5.6V14.3z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>

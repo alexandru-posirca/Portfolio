@@ -7,7 +7,7 @@
       @include flex-c-c-col;
       margin: 20px auto;
       border-radius: 10px;
-      max-width: 350px;
+      max-width: 390px;
       overflow: hidden;
       .project-img {
         cursor: pointer;
@@ -42,8 +42,31 @@
           margin-bottom: -5px;
           font-size: var(--fs-small-500);
         }
-        ul li {
-          font-weight: 700;
+        .code-stack {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 20px;
+          align-items: center;
+          .tech-stack {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          ul {
+          margin-top: 0;
+            li {
+              font-weight: 700;
+            }
+          }
+        }
+          img {
+            width: 35px;
+            height: auto;
+          }
+          a {
+            font-size: var(--fs-small-500);
+            color: $white;
+          }
         }
       }
       .project-img {
@@ -127,6 +150,11 @@
             }
             p {
               font-size: var(--fs-small-600);
+            }
+            .code-stack {
+            a {
+              font-size: var(--fs-small-700);
+            }
             }
           }
           .project-img {
